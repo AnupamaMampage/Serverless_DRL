@@ -1,5 +1,4 @@
 max_num_vms = 30
-
 max_num_replicas = 80
 max_total_pod_mem = 3000
 min_pod_mem_req = 100
@@ -12,6 +11,7 @@ max_vm_cpu = 73600
 max_request_rate = 100
 max_step_latency_perfn = 10
 max_step_vmcost = 10
+
 # desired util
 pod_scale_cpu_util = 0.5
 pod_scale_cpu_util_low = 0.2
@@ -28,13 +28,12 @@ step_interval = 9
 scaling_start = 2
 reward_interval = 4
 max_steps = 6
-
-# changed from 3
 reward_window_size = 3
 state_latency_window = 1
+num_episodes = 60
+num_wls = 60
 
 # Events tags
-
 schedule_request = "SCHEDULE_REQ"
 re_schedule_request = "RE_SCHEDULE_REQ"
 finish_request = "REQ_COMPLETE"
@@ -43,9 +42,8 @@ scale_pod = "SCALE_POD"
 schedule_pod = "SCHEDULE_POD"
 invoke_step_scaling = "STEP_SCALING"
 calc_reward = "REWARD"
-num_episodes = 60
-num_wls = 60
 
+#Comparison algo parameters
 knative_pod_concurrency = 3
 kube_pod_cpu_threshold = 0.5
 faas_capacity = 3
